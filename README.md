@@ -2,7 +2,6 @@ UIView-FastScreenshot
 =====================
 
 The fastest way to get iOS screenshot
-
 Usage
 =====================
 
@@ -16,7 +15,6 @@ Usage
 If you are using iOS 7, you may have a problem with IOKit: [http://stackoverflow.com/a/17624748/440168]()
 
 ####3. Build and Run your project only for Device configuration, not for Simulator
-
 Need to be implemented
 =====================
 
