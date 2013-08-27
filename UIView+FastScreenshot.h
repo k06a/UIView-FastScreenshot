@@ -13,6 +13,3 @@
 + (UIImage *)screenshot;
 
 @end
-ot;
-
-@end
