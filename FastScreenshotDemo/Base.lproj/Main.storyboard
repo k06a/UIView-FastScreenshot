@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0IF-cw-upQ">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0IF-cw-upQ">
                                 <rect key="frame" x="99" y="188" width="122" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -24,39 +24,76 @@
                                     <segment title="Second"/>
                                 </segments>
                             </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhh-Wk-ZyQ">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhh-Wk-ZyQ">
                                 <rect key="frame" x="20" y="224" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYS-sL-q1b">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYS-sL-q1b">
                                 <rect key="frame" x="251" y="224" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-yw-Iof">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-yw-Iof">
                                 <rect key="frame" x="75" y="224" width="170" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kYI-UK-2G4">
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kYI-UK-2G4">
                                 <rect key="frame" x="113" y="265" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpy-ZA-cOQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpy-ZA-cOQ">
                                 <rect key="frame" x="103" y="430" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Take Shot New">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeShotNew:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lpg-YN-wUY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmy-1r-M6z">
+                                <rect key="frame" x="103" y="392" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Take Shot">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="takeShot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U2X-ed-nEt"/>
+                                    <action selector="takeShot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wNV-zK-u06"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3uU-p5-79a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3uU-p5-79a">
                                 <rect key="frame" x="220" y="380" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="hcp-WO-2Aw"/>
+                                    <constraint firstAttribute="width" constant="100" id="jar-Es-QKL"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3uU-p5-79a" secondAttribute="trailing" id="4Ej-IP-Bc0"/>
+                            <constraint firstItem="kYI-UK-2G4" firstAttribute="centerX" secondItem="8Ob-yw-Iof" secondAttribute="centerX" id="8FE-tl-DIh"/>
+                            <constraint firstAttribute="trailing" secondItem="eYS-sL-q1b" secondAttribute="trailing" constant="20" symbolic="YES" id="Aa1-vK-ozo"/>
+                            <constraint firstItem="zpy-ZA-cOQ" firstAttribute="trailing" secondItem="dmy-1r-M6z" secondAttribute="trailing" id="J2b-uS-Zxe"/>
+                            <constraint firstItem="eYS-sL-q1b" firstAttribute="leading" secondItem="8Ob-yw-Iof" secondAttribute="trailing" constant="8" symbolic="YES" id="JoX-6N-Ngc"/>
+                            <constraint firstAttribute="bottom" secondItem="3uU-p5-79a" secondAttribute="bottom" id="LhH-eX-VuI"/>
+                            <constraint firstItem="zpy-ZA-cOQ" firstAttribute="top" secondItem="dmy-1r-M6z" secondAttribute="bottom" constant="8" symbolic="YES" id="Og0-s8-IaU"/>
+                            <constraint firstItem="8Ob-yw-Iof" firstAttribute="leading" secondItem="Uhh-Wk-ZyQ" secondAttribute="trailing" constant="8" symbolic="YES" id="Pyf-6v-Ece"/>
+                            <constraint firstItem="3uU-p5-79a" firstAttribute="leading" secondItem="dmy-1r-M6z" secondAttribute="trailing" constant="3" id="USM-BK-a6r"/>
+                            <constraint firstItem="kYI-UK-2G4" firstAttribute="top" secondItem="8Ob-yw-Iof" secondAttribute="bottom" constant="8" symbolic="YES" id="dXL-33-7Gg"/>
+                            <constraint firstItem="Uhh-Wk-ZyQ" firstAttribute="top" secondItem="8Ob-yw-Iof" secondAttribute="top" id="e66-iT-t88"/>
+                            <constraint firstItem="0IF-cw-upQ" firstAttribute="centerX" secondItem="8Ob-yw-Iof" secondAttribute="centerX" id="fpR-Hy-9sa"/>
+                            <constraint firstItem="8Ob-yw-Iof" firstAttribute="top" secondItem="0IF-cw-upQ" secondAttribute="bottom" constant="8" symbolic="YES" id="hgI-sN-6qV"/>
+                            <constraint firstAttribute="bottom" secondItem="zpy-ZA-cOQ" secondAttribute="bottom" constant="20" symbolic="YES" id="jnA-pY-B0M"/>
+                            <constraint firstItem="8Ob-yw-Iof" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="kBt-sU-BBx"/>
+                            <constraint firstItem="8Ob-yw-Iof" firstAttribute="top" secondItem="eYS-sL-q1b" secondAttribute="top" id="l7y-OR-WlG"/>
+                            <constraint firstItem="Uhh-Wk-ZyQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="pcd-OV-PvE"/>
+                            <constraint firstItem="kYI-UK-2G4" firstAttribute="centerX" secondItem="dmy-1r-M6z" secondAttribute="centerX" id="qcM-oK-mcV"/>
+                            <constraint firstItem="dmy-1r-M6z" firstAttribute="leading" secondItem="zpy-ZA-cOQ" secondAttribute="leading" id="rFs-r2-PH0"/>
+                            <constraint firstItem="0IF-cw-upQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="99" id="zOM-2B-RFb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3uU-p5-79a" id="YCc-P6-OSn"/>

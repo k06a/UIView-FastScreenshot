@@ -15,6 +15,15 @@ Usage
 If you are using iOS 7, you may have a problem with IOKit: [http://stackoverflow.com/a/17624748/440168]()
 
 ####3. Build and Run your project only for Device configuration, not for Simulator
+
+Performance
+=====================
+iPad Mini screenshot boosted 5x:
+
+ * `-renderInContext` - 0.177s
+ * 'FastScreenshot' - 0.033s
+
+
 Need to be implemented
 =====================
 

@@ -466,6 +466,7 @@
 				GCC_PREFIX_HEADER = "FastScreenshotDemo/FastScreenshotDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = ./headers;
 				INFOPLIST_FILE = "FastScreenshotDemo/FastScreenshotDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					IOSurface,
@@ -477,6 +478,7 @@
 					IOKit,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -495,6 +497,7 @@
 				GCC_PREFIX_HEADER = "FastScreenshotDemo/FastScreenshotDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = ./headers;
 				INFOPLIST_FILE = "FastScreenshotDemo/FastScreenshotDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					IOSurface,
@@ -506,6 +509,7 @@
 					IOKit,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

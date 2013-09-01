@@ -15,9 +15,27 @@
 
 @implementation ABViewController
 
++ (UIImage *)imageWithView:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
+
 - (IBAction)takeShot:(id)sender
 {
+    NSDate * date = [NSDate date];
+    self.imageView.image = [self.class imageWithView:self.view];
+    NSLog(@"%f sec", [[NSDate date] timeIntervalSinceDate:date]);
+}
+
+- (IBAction)takeShotNew:(id)sender
+{
+    NSDate * date = [NSDate date];
     self.imageView.image = [UIView screenshot];
+    NSLog(@"%f sec", [[NSDate date] timeIntervalSinceDate:date]);
 }
 
 - (void)viewDidLoad
