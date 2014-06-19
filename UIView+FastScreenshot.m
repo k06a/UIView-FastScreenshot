@@ -5,6 +5,8 @@
 //  Created by Anton Bukov on 27.08.13.
 //  Copyright (c) 2013 Anton Bukov. All rights reserved.
 //
+//  Fix for iPad compatibility found on:
+//  https://github.com/coolstar/RecordMyScreen/blob/master/RecordMyScreen/CSScreenRecorder.m
 
 #import "IOSurface.h"
 #import "UIView+FastScreenshot.h"
@@ -14,8 +16,20 @@
 + (UIImage *)screenshot
 {
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    NSInteger width = screenSize.width * [UIScreen mainScreen].scale;
-    NSInteger height = screenSize.height * [UIScreen mainScreen].scale;
+    float scale = [UIScreen mainScreen].scale;
+    
+    NSInteger width, height;
+    // setup the width and height of the framebuffer for the device
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        // iPhone frame buffer is Portrait
+        width = screenSize.width * scale;
+        height = screenSize.height * scale;
+    } else {
+        // iPad frame buffer is Landscape
+        width = screenSize.height * scale;
+        height = screenSize.width * scale;
+    }
+    
     NSInteger bytesPerElement = 4;
     NSInteger bytesPerRow = bytesPerElement * width;
     NSInteger totalBytes = bytesPerRow * height;
